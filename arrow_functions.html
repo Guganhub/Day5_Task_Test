@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        //odd numbers
+        oddNumbers = (array) => {
+                   for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                        }
+                        oddNumbers([1,2,3])
+
+        //Convert all the string to title caps
+        var name = 'hello this is tony'
+        titleCase = (str) => {
+                str = str.toLowerCase().split(' ');
+                for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                } 
+                return str.join(' ');
+            }  
+            console.log(titleCase(name))  
+            
+            
+
+          //Sum of all numbers in tha array
+
+          sum = (array)=>{
+             var sum = 0;
+                  for(var i = 0 ; i< array.length ; i++){
+                     sum = sum + array[i];
+                   }
+                   console.log(sum);
+                   }
+                   sum([1,2,3,4])
+        //Return prime numbers
+
+        primeNumber = (numArray) => {
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  }
+                  primeNumber([1,2,3,4,5])
+
+//Return all palindromes in an array
+palindrome = (n) =>
+    {
+        let str = "" + n;
+        let len = str.length;
+        for (let i = 0; i < parseInt(len / 2, 10); i++)
+        {
+            if (str[i] != str[len - 1 - i ])
+                return false;
+        }
+        return true;
+    
+    }
+    console.log(palindrome([1,2,1]))
+
+
+    // remove duplicates
+    duplicates =(arr)=>
+         {
+            let dup = [...new Set(arr)];
+            console.log(dup);
+         }
+         duplicates([1,1,2,3,4,5,5])
+    </script>
+</body>
+</html>

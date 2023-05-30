@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE function 3</title>
+</head>
+<body>
+    <script>
+        //sum of all numbers
+    (function(arr){
+        var sum =0;
+        for(var i=0;i<arr.length;i++){
+            sum=sum+arr[i]
+        }
+        console.log(sum)
+    })([1,2,3,4])
+
+    </script>
+</body>
+</html>
